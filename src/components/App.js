@@ -1,19 +1,21 @@
 import React from "react";
-import { format } from "date-fns";
-import ExampleComponent from "./ExampleComponent";
+import { format } from "date-fns"; // You can remove this if you're not using the date anymore.
+import ExampleComponent from "./ExampleComponent"; // Import ExampleComponent
 
-// Add your code own within the return statement
+// Step 1: Create a simple TestComponent
+import TestComponent from "./TestComponent"; // Import TestComponent
+
 function App() {
   return (
     <div className="App">
-      <h1>{format(new Date(), "MMMM do yyyy, h:mm:ss a")}</h1>
-      <p className="App-intro">
-        In React apps, we write JSX - it looks like HTML, and uses a lot of HTML
-        syntax. JSX lets us include JavaScript functions right along with the
-        HTML, and also allows us to add in components, which are separate,
-        self-contained chunks of JSX.
-      </p>
+      {/* Step 2: Update this <h1> to display "Now" */}
+      <h1>Now</h1>
+      
+      {/* Step 3: ExampleComponent is here */}
       <ExampleComponent />
+
+      {/* Step 4: Add the TestComponent below ExampleComponent */}
+      <TestComponent />
     </div>
   );
 }
